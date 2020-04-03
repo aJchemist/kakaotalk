@@ -1,0 +1,10 @@
+out
+.cpcache
+.eastwood
+node_modules
+yarn*
+.nrepl*
+/data
+/target
+/.ci/settings.xml
+*.xls*

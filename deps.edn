@@ -1,0 +1,30 @@
+{:paths ["src/core"]
+ :aliases
+ {
+  :eastwood
+  {:extra-deps {jonase/eastwood {:mvn/version "0.3.6"}}
+   :main-opts  ["-m" "eastwood.lint" {:source-paths ["src/core"]}]}
+
+
+  :kibit
+  {:extra-paths ["resource" "src/test"]
+   :extra-deps  {jonase/kibit {:mvn/version "0.1.7"}}
+   :main-opts   ["-m" ""]}
+
+
+  :test
+  {
+   :extra-paths ["src/test"]
+   :extra-deps
+   {
+    org.clojure/clojure   {:mvn/version "1.10.1"}
+    com.h2database/h2     {:mvn/version "1.4.200"}
+    org.clojure/java.jdbc {:mvn/version "0.7.11"}
+
+    com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git" :sha "209b64504cb3bd3b99ecfec7937b358a879f55c1"}
+    }}}}
+
+
+;; Local Variables:
+;; cider-preferred-build-tool: clojure-cli
+;; End:
